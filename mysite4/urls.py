@@ -1,26 +1,16 @@
-from django.db import models
-from django.utils import timezone
+"""mysite4 URL Configuration
 
-
-
-
-class Person(models.Model):
-    firstname_text = models.CharField(max_length=200)
-    lastname_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-
-    def __str__(self):
-        return self.firstname_text,lastname_text
-
-
-
-class Choice(models.Model):
-    question = models.ForeignKey(Person, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.choice_text
-
-#p2=Person.objects.create(firstname_text='John', lastname_text='Doe',pub_date=timezone.now)
-#p1=Person.objects.create(firstname_text='Neil', lastname_text='Hofman',pub_date=timezone.now)
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+f
